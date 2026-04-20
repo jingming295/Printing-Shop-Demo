@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 import { Navbar } from "@/components/Navbar"
 import { Toaster } from "sonner"
+import { Footer } from "@/components/Footer" // 引入 Footer
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
 
 const fontMono = Geist_Mono({
@@ -13,13 +14,20 @@ const fontMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Bytesphere Printing Shop Demo",
-  description: "High-quality printing services in Taman Sri Tebrau, Johor Bahru. We offer digital printing, banners, business cards, and custom design services.",
-  keywords: ["printing shop Johor Bahru", "printing service Taman Sri Tebrau", "digital printing JB", "banner printing Johor", "custom printing services"],
+  title: "Bytesphere Printing Shop | Premium Printing in Mount Austin, JB",
+  description: "High-quality digital printing services in Taman Mount Austin, Johor Bahru. Specialized in premium business cards, banners, and corporate gifts with fast turnaround.",
+  keywords: [
+    "printing shop Mount Austin",
+    "printing service Johor Bahru",
+    "digital printing JB",
+    "Mount Austin business card printing",
+    "banner printing Johor",
+    "custom corporate gifts JB"
+  ],
   openGraph: {
-    title: "Best Printing Shop in Johor Bahru",
-    description: "Quality printing services located at Taman Sri Tebrau, Johor Bahru.",
-    url: "https://printingdemo.bytespheres.com/", // 替换为你的域名
+    title: "Best Printing Shop in Mount Austin, Johor Bahru",
+    description: "Premium digital printing and custom design services located at the heart of Mount Austin, JB.",
+    url: "https://printingdemo.bytespheres.com/",
     siteName: "Bytesphere Printing Shop Demo",
     locale: "en_MY",
     type: "website",
@@ -84,6 +92,7 @@ export default function RootLayout({
               <main className="flex-1">
                 {children}
               </main>
+              <Footer />
             </div>
             <Toaster position="top-center" richColors />
           </ThemeProvider>
