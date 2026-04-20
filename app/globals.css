@@ -194,3 +194,27 @@
 button {
   cursor: pointer;
 }
+
+/* 1. 基础 View Transition 配置（保持之前成功的层级） */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 999;
+}
+
+/* 2. 核心：切换瞬间，把 Navbar 变成不透明的实体色，遮住底下的字 */
+.is-transitioning header,
+.is-transitioning nav {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  /* 强制给一个实色背景，防止穿透 */
+  background-color: var(--background) !important;
+  transition: none !important;
+}

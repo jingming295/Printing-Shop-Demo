@@ -95,7 +95,7 @@ function SuccessContent()
         <div className="min-h-screen flex flex-col items-center justify-start pt-24 pb-12 px-6 animate-in fade-in zoom-in-95 duration-500">
 
             {/* 2. 优化圆角为 rounded-[2rem]，更显精致 */}
-            <Card className="max-w-md w-full border-none bg-card/40 backdrop-blur-xl shadow-2xl rounded-[2rem] overflow-hidden ring-1 ring-border p-0">
+            <Card className="max-w-md w-full border-none bg-card/40 shadow-2xl rounded-[2rem] overflow-hidden ring-1 ring-border p-0">
                 <CardContent className="p-0">
 
                     {/* 顶部蓝色横幅 */}

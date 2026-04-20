@@ -7,7 +7,7 @@ export function Footer()
     const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=1.56066,103.77478";
 
     return (
-        <footer className="relative z-10 border-t border-black/5 dark:border-white/10 bg-slate-50/50 dark:bg-black/20 backdrop-blur-md">
+        <footer className="relative z-10 border-t border-black/5 dark:border-white/10 bg-slate-50/50 dark:bg-black/20">
             <div className="container mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 

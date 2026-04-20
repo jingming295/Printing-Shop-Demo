@@ -63,7 +63,7 @@ export const UploadArea = ({ file, setFile, productSize, onOpenEditor }: UploadA
                         Step 1: Choose Workflow
                     </Label>
                 </div>
-                <div className="flex bg-secondary/50 p-1 rounded-xl border border-border backdrop-blur-sm">
+                <div className="flex bg-secondary/50 p-1 rounded-xl border border-border">
                     {[
                         { id: 'upload' as const, label: 'Upload', icon: <Upload className="size-3" /> },
                         // { id: 'design' as const, label: 'Design', icon: <Palette className="size-3" /> }
@@ -93,7 +93,7 @@ export const UploadArea = ({ file, setFile, productSize, onOpenEditor }: UploadA
                     <div className="h-full w-full animate-in fade-in zoom-in-95 duration-300">
                         {!file ? (
                             <label className="block h-full w-full cursor-pointer">
-                                <Card className="h-full border-2 border-dashed border-primary/20 bg-card/30 backdrop-blur-md hover:border-primary/50 hover:bg-primary/5 transition-all duration-500 rounded-[2.5rem] overflow-hidden group">
+                                <Card className="h-full border-2 border-dashed border-primary/20 bg-card/30 hover:border-primary/50 hover:bg-primary/5 transition-all duration-500 rounded-[2.5rem] overflow-hidden group">
                                     <CardContent className="flex flex-col items-center justify-center h-full p-10 text-center">
                                         <div className="p-6 bg-background rounded-[2rem] mb-6 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 border border-border shadow-xl shadow-primary/5">
                                             <Upload className="size-10 text-primary" />
@@ -108,7 +108,7 @@ export const UploadArea = ({ file, setFile, productSize, onOpenEditor }: UploadA
                             </label>
                         ) : (
                             /* 文件已上传状态 */
-                            <Card className="h-full border-none bg-card/40 backdrop-blur-xl rounded-[2.5rem] overflow-hidden animate-in zoom-in-95 shadow-2xl flex flex-col ring-1 ring-primary/20">
+                            <Card className="h-full border-none bg-card/40 rounded-[2.5rem] overflow-hidden animate-in zoom-in-95 shadow-2xl flex flex-col ring-1 ring-primary/20">
                                 <CardContent className="p-0 flex-1 flex flex-col min-h-0">
                                     <div className="flex-1 relative flex items-center justify-center overflow-hidden min-h-0 p-6">
                                         {previewUrl ? (
@@ -152,7 +152,7 @@ export const UploadArea = ({ file, setFile, productSize, onOpenEditor }: UploadA
                     /* DESIGN 模式 - 增加交互感 */
                     <div className="h-full w-full animate-in fade-in zoom-in-95 duration-300">
                         <Card
-                            className="h-full border-none bg-gradient-to-br from-primary/10 via-card/50 to-background backdrop-blur-md rounded-[2.5rem] overflow-hidden shadow-none ring-1 ring-primary/20 hover:ring-primary/50 transition-all cursor-pointer group flex flex-col"
+                            className="h-full border-none bg-gradient-to-br from-primary/10 via-card/50 to-background rounded-[2.5rem] overflow-hidden shadow-none ring-1 ring-primary/20 hover:ring-primary/50 transition-all cursor-pointer group flex flex-col"
                             onClick={onOpenEditor}
                         >
                             <CardContent className="p-0 flex-1 flex flex-col items-center justify-center text-center px-12">

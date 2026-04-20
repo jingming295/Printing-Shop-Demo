@@ -39,7 +39,7 @@ export default function Products()
                         {/* 重点：整个卡片现在包裹在 Link 中，对 SEO 极好，且支持右键新标签打开 */}
                         <Link href={`/order/${p.id}`}>
                             <Card
-                                className="relative aspect-square overflow-hidden border-none bg-card/50 backdrop-blur-sm shadow-sm ring-1 ring-border group-hover:ring-primary/50 group-hover:shadow-2xl group-hover:shadow-primary/10 transition-all duration-500 rounded-2xl md:rounded-[2rem]"
+                                className="relative aspect-square overflow-hidden border-none bg-card/50 shadow-sm ring-1 ring-border group-hover:ring-primary/50 group-hover:shadow-2xl group-hover:shadow-primary/10 transition-all duration-500 rounded-2xl md:rounded-[2rem]"
                             >
                                 <CardContent className="p-0 h-full w-full">
                                     <div className="relative w-full h-full">

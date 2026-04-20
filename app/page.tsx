@@ -61,7 +61,7 @@ export default function Page()
             desc: "Manual verification of resolution and bleed before production."
           }
         ].map((f, i) => (
-          <div key={i} className="group p-6 md:p-8 rounded-[2rem] border bg-card/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20 relative overflow-hidden">
+          <div key={i} className="group p-6 md:p-8 rounded-[2rem] border bg-card/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/20 relative overflow-hidden">
             <div className="relative z-10">
               <div className="mb-4 md:mb-6">{f.icon}</div>
               <h3 className="font-bold text-lg md:text-xl mb-2 tracking-tight">{f.title}</h3>

@@ -162,7 +162,7 @@ const Order = () =>
                         {/* 数量输入卡片 - 玻璃拟态 */}
                         <Card className={cn(
                             "border-none rounded-[2rem] transition-all duration-500 shadow-2xl",
-                            isInvalid ? "bg-destructive/5 ring-2 ring-destructive" : "bg-card/50 backdrop-blur-xl ring-1 ring-border"
+                            isInvalid ? "bg-destructive/5 ring-2 ring-destructive" : "bg-card/50 ring-1 ring-border"
                         )}>
                             <CardContent className="p-6 md:p-10 space-y-8">
                                 <div className="space-y-4">

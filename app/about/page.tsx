@@ -34,7 +34,7 @@ export default function About()
 
             {/* 2. Demo Disclaimer */}
             <section>
-                <Card className="bg-card/40 backdrop-blur-md border-border/50 rounded-[2.5rem] overflow-hidden shadow-xl ring-1 ring-white/10">
+                <Card className="bg-card/40  border-border/50 rounded-[2.5rem] overflow-hidden shadow-xl ring-1 ring-white/10">
                     <CardContent className="p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
                         <div className="flex-1 space-y-6">
                             <div className="flex items-center gap-2 text-primary font-bold tracking-[0.2em] text-xs uppercase">
