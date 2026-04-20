@@ -6,13 +6,13 @@ import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes"
 function ThemeProvider({
   children,
   ...props
-}: React.ComponentProps<typeof NextThemesProvider>) {
+}: React.ComponentProps<typeof NextThemesProvider>)
+{
   return (
     <NextThemesProvider
       attribute="class"
       defaultTheme="system"
       enableSystem
-      disableTransitionOnChange
       {...props}
     >
       <ThemeHotkey />
@@ -21,8 +21,10 @@ function ThemeProvider({
   )
 }
 
-function isTypingTarget(target: EventTarget | null) {
-  if (!(target instanceof HTMLElement)) {
+function isTypingTarget(target: EventTarget | null)
+{
+  if (!(target instanceof HTMLElement))
+  {
     return false
   }
 
@@ -34,24 +36,31 @@ function isTypingTarget(target: EventTarget | null) {
   )
 }
 
-function ThemeHotkey() {
+function ThemeHotkey()
+{
   const { resolvedTheme, setTheme } = useTheme()
 
-  React.useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.defaultPrevented || event.repeat) {
+  React.useEffect(() =>
+  {
+    function onKeyDown(event: KeyboardEvent)
+    {
+      if (event.defaultPrevented || event.repeat)
+      {
         return
       }
 
-      if (event.metaKey || event.ctrlKey || event.altKey) {
+      if (event.metaKey || event.ctrlKey || event.altKey)
+      {
         return
       }
 
-      if (event.key.toLowerCase() !== "d") {
+      if (event.key.toLowerCase() !== "d")
+      {
         return
       }
 
-      if (isTypingTarget(event.target)) {
+      if (isTypingTarget(event.target))
+      {
         return
       }
 
@@ -60,7 +69,8 @@ function ThemeHotkey() {
 
     window.addEventListener("keydown", onKeyDown)
 
-    return () => {
+    return () =>
+    {
       window.removeEventListener("keydown", onKeyDown)
     }
   }, [resolvedTheme, setTheme])
