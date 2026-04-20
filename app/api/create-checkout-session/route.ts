@@ -13,10 +13,10 @@ export async function POST(req: Request)
         const { productId, amount, quantity, productName } = body;
 
         // 打印一下，看看这行到底拿到了什么
-        console.log("DOMAIN URL:", process.env.NEXT_PUBLIC_CLIENT_URL);
+        console.log("DOMAIN URL:", process.env.CLIENT_URL);
 
         // 增加保底逻辑，防止变量为空导致错误
-        const YOUR_DOMAIN = process.env.NEXT_PUBLIC_CLIENT_URL || "http://localhost:3000";
+        const YOUR_DOMAIN = process.env.CLIENT_URL || "http://localhost:3000";
 
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ["card"], // 建议显式加上
