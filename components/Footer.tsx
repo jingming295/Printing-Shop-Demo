@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Tag } from "lucide-react"
 
 export function Footer()
 {
@@ -14,7 +14,7 @@ export function Footer()
                             ByteSphere Printing
                         </h3>
                         <p className="text-slate-600 dark:text-muted-foreground text-sm leading-relaxed">
-                            Premium digital printing services in Johor Bahru. We specialize in high-quality business cards, banners, and custom corporate gift solutions.
+                            Premium digital printing & 24h express service in Mount Austin. We specialize in high-quality business cards, banners, and custom corporate gift solutions for Johor Bahru businesses.
                         </p>
                     </div>
 
@@ -29,13 +29,21 @@ export function Footer()
                         </nav>
                     </div>
 
-                    {/* 联系地址 */}
+                    {/* 联系地址 - 严格同步 SEO 信息 */}
                     <div className="space-y-4">
                         <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-white">Contact Us</h4>
                         <ul className="space-y-3 text-sm text-slate-600 dark:text-muted-foreground">
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0 mt-0.5" />
-                                <span>88, Jalan Austin Heights 8/7, <br />Taman Mount Austin, <br />81100 Johor Bahru, Johor</span>
+                                <span>
+                                    71, Jalan Austin Heights 8/1, <br />
+                                    L1-05 (Next to Water Park), <br />
+                                    Taman Mount Austin, 81100 JB
+                                </span>
+                            </li>
+                            <li className="flex items-center gap-3 font-medium text-blue-600 dark:text-cyan-400">
+                                <Tag className="w-4 h-4 shrink-0" />
+                                <span>Price Range: RM 35 — RM 300</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0" />
@@ -47,7 +55,7 @@ export function Footer()
                             </li>
                             <li className="flex items-center gap-3">
                                 <Clock className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0" />
-                                <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+                                <span>Mon - Sat: 9:00 AM - 9:00 PM</span>
                             </li>
                         </ul>
                     </div>
