@@ -31,7 +31,7 @@ export function Navbar()
         <header className="fixed top-0 left-0 right-0 z-[100] flex justify-center border-b border-slate-200/50 dark:border-white/5 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl">
             <nav className="flex items-center justify-between w-full max-w-7xl px-6 h-18">
 
-                {/* Logo Section */}
+                {/* Logo Section - 保留原样 */}
                 <Link href="/" className="flex items-center gap-2 group">
                     <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-primary-foreground shadow-md shadow-primary/20 transition-transform group-hover:scale-105">
                         <Printer size={20} />
@@ -72,14 +72,20 @@ export function Navbar()
                     {/* 交互区 */}
                     <div className="flex items-center gap-3">
                         <ModeToggle />
-                        <Button
-                            size="sm"
-                            className="bg-whatsapp text-white hover:bg-whatsapp/90 rounded-full px-5 font-semibold shadow-sm transition-all active:scale-95"
-                            onClick={() => window.open(siteConfig.contact.whatsapp, "_blank")}
+                        {/* 优化：使用标准 <a> 标签包裹，对 SEO 更好 */}
+                        <a
+                            href={siteConfig.contact.whatsapp}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            <MessageCircle size={16} className="mr-2 fill-current" />
-                            Contact Us
-                        </Button>
+                            <Button
+                                size="sm"
+                                className="bg-whatsapp text-white hover:bg-whatsapp/90 rounded-full px-5 font-semibold shadow-sm transition-all active:scale-95"
+                            >
+                                <MessageCircle size={16} className="mr-2 fill-current" />
+                                Contact Us
+                            </Button>
+                        </a>
                     </div>
                 </div>
 
@@ -126,17 +132,20 @@ export function Navbar()
                         </div>
 
                         <div className="p-6 border-t bg-accent/20">
-                            <Button
-                                className="w-full py-7 bg-whatsapp text-white rounded-2xl font-bold shadow-xl shadow-whatsapp/20 active:scale-95 transition-transform"
-                                onClick={() =>
-                                {
-                                    setIsOpen(false);
-                                    window.open(siteConfig.contact.whatsapp, "_blank");
-                                }}
+                            {/* 移动端跳转也改用标准链接 */}
+                            <a
+                                href={siteConfig.contact.whatsapp}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setIsOpen(false)}
                             >
-                                <MessageCircle className="mr-2 h-5 w-5 fill-current" />
-                                WhatsApp Inquiry
-                            </Button>
+                                <Button
+                                    className="w-full py-7 bg-whatsapp text-white rounded-2xl font-bold shadow-xl shadow-whatsapp/20 active:scale-95 transition-transform"
+                                >
+                                    <MessageCircle className="mr-2 h-5 w-5 fill-current" />
+                                    WhatsApp Inquiry
+                                </Button>
+                            </a>
                         </div>
                     </SheetContent>
                 </Sheet>

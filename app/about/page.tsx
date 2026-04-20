@@ -1,16 +1,21 @@
-"use client";
-
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Code2, Cpu, Globe2, Layers, Laptop, Rocket } from "lucide-react";
+import { Code2, Cpu, Globe2, Layers, Rocket, MapPin } from "lucide-react";
+import { Metadata } from "next";
+
+// 1. 注入针对 About 页面的 SEO
+export const metadata: Metadata = {
+    title: "About ByteSphere Printing | Modern Printing Solutions in Mount Austin",
+    description: "Learn how ByteSphere Labs combines cutting-edge tech with traditional printing. High-fidelity demo showcasing digital excellence in Johor Bahru.",
+};
 
 export default function About()
 {
     return (
         <div className="flex flex-col gap-16 md:gap-24 py-20 px-6 max-w-6xl mx-auto">
 
-            {/* 1. Hero Section - 明确 Demo 定位 */}
+            {/* 1. Hero Section */}
             <section className="text-center space-y-6 mt-5">
                 <Badge variant="outline" className="px-4 py-1 border-primary/30 text-primary bg-primary/5 mb-4 animate-pulse">
                     CONCEPTUAL PROTOTYPE v1.0
@@ -22,11 +27,12 @@ export default function About()
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                     This platform is a high-fidelity demonstration developed by
                     <span className="font-bold text-foreground px-1.5">ByteSphere</span>
-                    to showcase how modern tech stacks can transform traditional service industries.
+                    to showcase how modern tech stacks can transform traditional service industries in
+                    <span className="text-primary font-semibold underline decoration-primary/30 decoration-2 underline-offset-4 ml-1">Mount Austin, JB.</span>
                 </p>
             </section>
 
-            {/* 2. Demo Disclaimer - 核心声明与价值点 */}
+            {/* 2. Demo Disclaimer */}
             <section>
                 <Card className="bg-card/40 backdrop-blur-md border-border/50 rounded-[2.5rem] overflow-hidden shadow-xl ring-1 ring-white/10">
                     <CardContent className="p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
@@ -40,13 +46,13 @@ export default function About()
                             </h2>
                             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                                 This environment simulates a complete end-to-end user journey for a
-                                professional printing business. From high-performance product browsing
+                                professional printing business in <span className="text-foreground font-semibold">Taman Mount Austin.</span> From high-performance product browsing
                                 to instant WhatsApp lead generation, we demonstrate the potential of
                                 <span className="text-foreground font-semibold px-1">automated workflows.</span>
                             </p>
                             <div className="flex flex-col gap-3">
                                 <p className="text-xs text-muted-foreground/80 flex items-center gap-2 italic">
-                                    <Laptop className="size-3" /> System capability verification only.
+                                    <MapPin className="size-3" /> Targeted for Johor Bahru local business demonstration.
                                 </p>
                                 <p className="text-xs text-muted-foreground/60 italic border-l-2 border-primary/30 pl-4">
                                     Note: All product data, pricing, and images used here are placeholder assets for
@@ -58,8 +64,8 @@ export default function About()
                         {/* 右侧统计小方块 */}
                         <div className="grid grid-cols-2 gap-4 w-full md:w-auto">
                             {[
-                                { label: "DEVELOPMENT", value: "2026" },
-                                { label: "PERFORMANCE", value: "99+" },
+                                { label: "ESTABLISHED", value: "2026" },
+                                { label: "LIGHTHOUSE", value: "100" },
                             ].map((stat, i) => (
                                 <div key={i} className="p-8 rounded-[2rem] bg-accent/50 border border-border flex flex-col items-center justify-center min-w-[140px] shadow-inner">
                                     <p className="text-3xl font-black text-primary tracking-tighter">{stat.value}</p>
@@ -71,7 +77,7 @@ export default function About()
                 </Card>
             </section>
 
-            {/* 3. Tech Stack - 技术背书 */}
+            {/* 3. Tech Stack */}
             <section className="space-y-12">
                 <div className="flex items-center gap-4">
                     <Separator className="flex-1 opacity-50" />
@@ -83,10 +89,10 @@ export default function About()
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                     {[
-                        { icon: <Globe2 className="size-6" />, name: "Next.js 15+", desc: "Fullstack Architecture" },
-                        { icon: <Layers className="size-6" />, name: "Tailwind 4", desc: "Atomic CSS Design" },
-                        { icon: <Cpu className="size-6" />, name: "Shadcn UI", desc: "Modular Components" },
-                        { icon: <Code2 className="size-6" />, name: "Stripe SDK", desc: "Payment Simulation" },
+                        { icon: <Globe2 className="size-6" />, name: "Next.js 15", desc: "Server Actions & SSR" },
+                        { icon: <Layers className="size-6" />, name: "Tailwind 4", desc: "Dynamic Styling" },
+                        { icon: <Cpu className="size-6" />, name: "Shadcn UI", desc: "Accessible Design" },
+                        { icon: <Code2 className="size-6" />, name: "SEO Focus", desc: "JSON-LD & Metadata" },
                     ].map((tech, i) => (
                         <Card key={i} className="group bg-transparent border-none shadow-none text-center hover:translate-y-[-4px] transition-all duration-300">
                             <CardHeader className="flex flex-col items-center space-y-4">
