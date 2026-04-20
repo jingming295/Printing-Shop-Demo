@@ -23,8 +23,8 @@ export function Footer()
                         <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Services</h4>
                         <nav className="flex flex-col space-y-2">
                             <Link href="/products" className="text-muted-foreground hover:text-cyan-400 text-sm transition-colors">Business Cards</Link>
-                            <Link href="/products" className="text-muted-foreground hover:text-cyan-400 text-sm transition-colors">Banners & Signage</Link>
-                            <Link href="/products" className="text-muted-foreground hover:text-cyan-400 text-sm transition-colors">Digital Photocopy</Link>
+                            <Link href="/products" className="text-muted-foreground hover:text-cyan-400 text-sm transition-colors">Roll-up Standee</Link>
+                            <Link href="/products" className="text-muted-foreground hover:text-cyan-400 text-sm transition-colors">A4 Flyers</Link>
                             <Link href="/products" className="text-muted-foreground hover:text-cyan-400 text-sm transition-colors">Custom Design</Link>
                         </nav>
                     </div>
@@ -39,11 +39,11 @@ export function Footer()
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="w-4 h-4 text-cyan-400 shrink-0" />
-                                <span>+60 7-123 4567</span>
+                                <span>+60 14-721 9697</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="w-4 h-4 text-cyan-400 shrink-0" />
-                                <span>hello@bytespheres.com</span>
+                                <span>jingming295@bytespheres.com</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Clock className="w-4 h-4 text-cyan-400 shrink-0" />
