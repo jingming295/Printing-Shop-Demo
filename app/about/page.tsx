@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Code2, Cpu, Globe2, Layers, ShieldCheck, Laptop, Rocket } from "lucide-react";
+import { Code2, Cpu, Globe2, Layers, Laptop, Rocket } from "lucide-react";
 
 export default function About()
 {
